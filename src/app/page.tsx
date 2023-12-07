@@ -191,11 +191,11 @@ export default async function Home() {
           alt="brett"
           width={450}
           height={450}
-          className="absolute left-[65vw] top-12 -z-10 transition-all duration-500 [filter:saturate(1.25)]"
+          className="absolute left-[69vw] top-12 -z-10 hidden [filter:saturate(1.25)] lg:block xl:left-[65vw]"
           priority
         />
         <FadeIn className="max-w-3xl" removeMotion>
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-900 [text-wrap:balance] sm:text-7xl">
+          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-900 [text-wrap:balance] sm:text-6xl lg:text-7xl">
             Designer, developer, entrepreneur, scientist
           </h1>
           <p className="mt-6 text-xl text-neutral-800">

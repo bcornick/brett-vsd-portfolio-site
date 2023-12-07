@@ -213,7 +213,7 @@ export function Footer() {
             <NewsletterForm action="subscribe" />
           </div>
         </div>
-        <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+        <div className="mb-20 mt-24 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
             <svg
               width="202"
@@ -254,6 +254,17 @@ export function Footer() {
           </Link>
           <p className="text-sm text-neutral-700">
             © Brett Cornick {new Date().getFullYear()}
+            <br />
+            View site{' '}
+            <Link
+              href="https://github.com/bcornick/brett-vsd-portfolio-site"
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+            >
+              source code
+            </Link>
+            .
           </p>
         </div>
       </FadeIn>

@@ -115,32 +115,32 @@ import { socialMediaProfiles } from '@/components/SocialMedia'
 
 function SocialBlocks() {
   return (
-    <FadeIn className="grid grid-cols-4 grid-rows-2 gap-4">
+    <FadeIn className="grid grid-cols-4 grid-rows-4 gap-4">
       {socialMediaProfiles.map((socialMediaProfile) => (
         <Link
           key={socialMediaProfile.href}
           href={socialMediaProfile.href}
           target="_blank"
           rel="noreferrer"
-          className={`flex items-center rounded-2xl bg-gradient-to-t text-white shadow-lg ${
+          className={`flex items-center rounded-2xl bg-gradient-to-t py-12 text-white shadow-lg ${
             socialMediaProfile.title === 'LinkedIn'
-              ? 'col-span-1 row-span-2 from-blue-800 to-blue-600 py-48'
+              ? 'col-span-2 row-span-2 from-blue-800 to-blue-600 lg:col-span-1 lg:row-span-4 lg:py-48'
               : ''
           } ${
             socialMediaProfile.title === 'Github'
-              ? 'col-span-1 row-span-2 from-orange-600 to-orange-400 py-48'
+              ? 'col-span-2 row-span-2 from-orange-600 to-orange-400 lg:col-span-1 lg:row-span-4 lg:py-48'
               : ''
           } ${
             socialMediaProfile.title === 'Twitter (X)'
-              ? 'col-span-2 row-span-1 from-sky-500 to-sky-300'
+              ? 'col-span-2 row-span-2 from-sky-500 to-sky-300'
               : ''
           } ${
             socialMediaProfile.title === 'Medium'
-              ? 'col-span-2 row-span-1 from-slate-950 to-slate-700'
+              ? 'col-span-2 row-span-2 from-slate-950 to-slate-700'
               : ''
           }`}
         >
-          <socialMediaProfile.icon className="m-auto h-24 w-24 fill-current" />
+          <socialMediaProfile.icon className="m-auto h-1/2 min-h-[50px] w-1/2 min-w-[50px] fill-current md:h-24 md:w-24" />
         </Link>
       ))}
     </FadeIn>

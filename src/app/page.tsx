@@ -11,6 +11,7 @@ import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import { skills } from '@/lib/sharedVariables'
 import brett from '@/images/brett-portrait.png'
+import splineStill from '@/images/splines/portfolio-main.jpg'
 
 import { type PastProject, type MDXEntry, loadPastProjects } from '@/lib/mdx'
 
@@ -142,6 +143,7 @@ function Expertise() {
                 src="https://prod.spline.design/pTC6UHuIL00bD5KX/scene.splinecode"
                 sizes="(min-width: 1024px) 41rem, 31rem"
                 className="justify-center lg:justify-end"
+                altSrc={splineStill}
               />
             </FadeIn>
           </div>

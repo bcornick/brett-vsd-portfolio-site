@@ -1,6 +1,6 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
@@ -14,14 +14,19 @@ import { TagList, TagListItem } from '@/components/TagList'
 import logoDSV from '@/images/vsd/logoDSV.png'
 import logoWoolf from '@/images/vsd/logoWoolf.png'
 import { Button } from '@/components/Button'
+import splineStill3 from '@/images/splines/vsd-year-3.jpg'
+import splineStill2 from '@/images/splines/vsd-year-2.jpg'
+import splineStill1 from '@/images/splines/vsd-year-1.jpg'
 
 function Section({
   title,
   image,
+  altImage,
   children,
 }: {
   title: string
   image: React.ComponentPropsWithoutRef<typeof StylizedImage>
+  altImage: StaticImageData
   children: React.ReactNode
 }) {
   return (
@@ -31,6 +36,7 @@ function Section({
           <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
             <StylizedImage
               {...image}
+              altSrc={altImage}
               sizes="(min-width: 1024px) 41rem, 31rem"
               className="justify-center lg:justify-end lg:group-even/section:justify-start"
             />
@@ -60,6 +66,7 @@ function Scope() {
       image={{
         src: 'https://prod.spline.design/6kiGmm4yj8CzrzOc/scene.splinecode',
       }}
+      altImage={splineStill1}
     >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
@@ -127,6 +134,7 @@ function Experiment() {
         src: 'https://prod.spline.design/uObiRBk00xFXapJk/scene.splinecode',
         shape: 1,
       }}
+      altImage={splineStill2}
     >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
@@ -160,6 +168,7 @@ function Build() {
         src: 'https://prod.spline.design/xjFFsJb18-etSjJ5/scene.splinecode',
         shape: 2,
       }}
+      altImage={splineStill3}
     >
       <div className="space-y-6 text-base text-neutral-600">
         <p>

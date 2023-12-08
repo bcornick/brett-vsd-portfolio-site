@@ -1,11 +1,10 @@
 'use client'
 
 import { useId } from 'react'
-import Image, { type ImageProps } from 'next/image'
+import Image, { StaticImageData, type ImageProps } from 'next/image'
 import clsx from 'clsx'
 import React, { Suspense } from 'react'
-
-// import Spline from '@splinetool/react-spline'
+import placeholder from '@/images/profile-placeholder.jpg'
 
 const Spline = React.lazy(() => import('@splinetool/react-spline'))
 
@@ -33,8 +32,12 @@ export function StylizedImage({
   shape = 0,
   className,
   src,
+  altSrc = placeholder,
   ...props
-}: ImagePropsWithOptionalAlt & { shape?: 0 | 1 | 2 }) {
+}: ImagePropsWithOptionalAlt & {
+  shape?: 0 | 1 | 2
+  altSrc?: StaticImageData
+}) {
   let id = useId()
   let { width, height, path } = shapes[shape]
 
@@ -45,13 +48,16 @@ export function StylizedImage({
           <g className="origin-center grayscale transition duration-1000 group-hover:grayscale-0">
             <foreignObject width={width} height={height}>
               {typeof src === 'string' && src.includes('spline') ? (
-                <Suspense fallback={<div>Loading...</div>}>
-                  <Spline
-                    scene={src}
-                    style={{ width, height }}
-                    className="-z-10"
+                <>
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Spline scene={src} className="hidden lg:block" />
+                  </Suspense>
+                  <Image
+                    src={altSrc}
+                    alt="3d blob design"
+                    className="w-full bg-white object-cover lg:hidden"
                   />
-                </Suspense>
+                </>
               ) : (
                 <Image
                   alt=""

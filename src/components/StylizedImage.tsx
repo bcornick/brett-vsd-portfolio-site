@@ -48,8 +48,8 @@ export function StylizedImage({
                 <Suspense fallback={<div>Loading...</div>}>
                   <Spline
                     scene={src}
-                    className="w-full bg-neutral-100 object-cover"
-                    style={{ aspectRatio: `${width} / ${height}` }}
+                    style={{ width, height }}
+                    className="-z-10"
                   />
                 </Suspense>
               ) : (

@@ -217,12 +217,14 @@ export default async function Home() {
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{
-          name: 'Someone smart',
-          affiliation: 'some prestigious org',
+          name: 'Aaron Appleton',
+          affiliation:
+            'Head of Venture Science Doctorate Programme at Deep Science Ventures',
         }}
       >
-        Something, something Brett is great. He is so awesome and we love
-        working with him. 10/10 would recommend Brett for doing things.
+        Brett is a model PhD candidate, thoroughly exemplifying the core traits
+        that make for a successful deep tech founder -- creativity, first
+        principles thinking, problem solving, ambition, resilience, and empathy.
       </Testimonial>
 
       <Expertise />

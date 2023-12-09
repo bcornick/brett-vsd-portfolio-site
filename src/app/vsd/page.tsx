@@ -220,7 +220,7 @@ function Values() {
 
       <Container className="mt-24">
         <GridList>
-          <FadeIn className="order-1">
+          <FadeIn className="order-1 flex items-center justify-center">
             <Link
               href="https://deepscienceventures.com/"
               target="_blank"
@@ -235,7 +235,7 @@ function Values() {
               />
             </Link>
           </FadeIn>
-          <FadeIn className="order-2 lg:order-4">
+          <FadeIn className="order-2 flex items-center justify-center lg:order-4">
             <Link
               href="https://woolf.university/"
               target="_blank"

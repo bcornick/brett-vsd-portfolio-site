@@ -124,7 +124,7 @@ export function NewsletterForm({
     const options = {
       method: 'POST',
       body: JSONdata,
-      timeout: 15000,
+      timeout: 25000,
     }
 
     const response = await fetch(endpoint, options)

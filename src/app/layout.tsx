@@ -15,13 +15,6 @@ export const metadata: Metadata = {
       'Brett is a climate-first technologist with a strong foundation in materials science, process design, software development, and AI/automation.',
     url: 'https://brettcornick.com',
     siteName: 'Brett Cornick Portfolio',
-    images: [
-      {
-        url: 'https://imgur.com/a/xoSXl2F',
-        width: 1200,
-        height: 630,
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -31,7 +24,6 @@ export const metadata: Metadata = {
     description:
       'Brett is a climate-first technologist with a strong foundation in materials science, process design, software development, and AI/automation.',
     creator: '@brett_cornick',
-    images: ['https://imgur.com/a/xoSXl2F'],
   },
   robots: {
     index: false,

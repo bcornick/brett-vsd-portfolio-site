@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     template: '%s - Brett Cornick',
     default: 'Brett Cornick',
   },
+  metadataBase: new URL('https://brettcornick.com/'),
   openGraph: {
     title: 'Brett Cornick',
     description:

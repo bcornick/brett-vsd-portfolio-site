@@ -24,7 +24,7 @@ export default function NotFound() {
           Submit your email address below to unsubscribe from all emails.
         </p>
 
-        <NewsletterForm action="unsubscribe" override={overrideEmail} />
+        {/* <NewsletterForm action="unsubscribe" override={overrideEmail} /> */}
 
         <Link
           href="/"

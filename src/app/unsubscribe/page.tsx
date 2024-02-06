@@ -1,15 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
+// import { useSearchParams } from 'next/navigation'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { NewsletterForm } from '@/components/Footer'
+// import { NewsletterForm } from '@/components/Footer'
 
 export default function NotFound() {
-  const searchParams = useSearchParams()
-  const overrideEmail = searchParams.get('email')?.toString()
+  // const searchParams = useSearchParams()
+  // const overrideEmail = searchParams.get('email')?.toString()
 
   return (
     <Container className="flex h-full items-center pt-24 sm:pt-32 lg:pt-40">

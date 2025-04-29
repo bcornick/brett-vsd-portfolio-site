@@ -198,7 +198,7 @@ export default async function Home() {
         />
         <FadeIn className="max-w-3xl" removeMotion>
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-900 [text-wrap:balance] sm:text-6xl lg:text-7xl">
-            Designer, developer, entrepreneur, scientist
+            Developer, scientist, entrepreneur, optimist
           </h1>
           <p className="mt-6 text-xl text-neutral-800">
             I am a <strong>climate-first technologist</strong> with a strong

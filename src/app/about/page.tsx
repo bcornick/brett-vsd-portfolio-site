@@ -193,13 +193,14 @@ function Interests() {
                   {group.examples.map((example) => (
                     <li key={example.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
+                        <div className="group relative  rounded-lg bg-neutral-100">
+                          <div className="absolute right-0 top-0 h-full w-full rounded-lg bg-gradient-to-tr from-emerald-400 to-white transition-transform duration-200 ease-linear group-hover:-translate-x-2 group-hover:translate-y-2" />
                           <Image
                             alt=""
                             {...example.image}
-                            className="h-96 w-full object-cover grayscale group-hover:grayscale-0"
+                            className="h-96 w-full rounded-lg object-cover grayscale group-hover:grayscale-0"
                           />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
+                          <div className="absolute inset-0 flex flex-col justify-end rounded-lg bg-gradient-to-t from-black to-black/0 to-40% p-6">
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
                               {example.name}
                             </p>

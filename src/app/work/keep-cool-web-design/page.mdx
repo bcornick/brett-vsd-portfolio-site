@@ -1,0 +1,69 @@
+import logo from '@/images/projects/keepCool/logomark-dark.png'
+import imageHero from './hero.jpg'
+
+export const pastProject = {
+  client: 'Keep Cool Newsletter',
+  title: 'Webpage build for Keep Cool newsletter',
+  description:
+    'I built a new custom subscribe page for my favorite climate tech newsletter, Keep Cool. The site was built using Next.js + Tailwind and rests on top of the Beehiiv-managed back end, requiring no change in workflow for the client.',
+  summary: [
+    'I built a new custom subscribe page for my favorite climate tech newsletter, Keep Cool, using Next.js + Tailwind.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2025-04',
+  service: 'Web design & development',
+  testimonial: {
+    author: {
+      name: 'Nick van Osdol',
+      role: 'Owner at Keep Cool',
+    },
+    content:
+      "A million thanks to Brett for crafting this beautiful site for my labor of love. I'm beyond happy with it, especially the touching reader testimonial section.",
+  },
+}
+
+export const metadata = {
+  title: `${pastProject.client} Development Project`,
+  description: pastProject.description,
+}
+
+## Overview
+
+This project involved developing a custom subscription page for Keep Cool, a climate tech newsletter, using Next.js paired with Tailwind CSS to create a responsive, modern interface with optimized performance. The solution integrates with Beehiiv's backend API, allowing subscribers to sign up directly while preserving the client's existing content management workflows and analytics tools. By leveraging Next.js's modern rendering tools, the page achieves fast load times and SEO efficiency, while Tailwind's utility-first design system ensures consistency across devices. The architecture eliminates the need for manual data synchronization, enabling the client to maintain their Beehiiv dashboard without disruption.
+
+## Results
+
+Legacy page: <a href='https://keepcool.co' target='_blank' rel='noreferrer'>keepcool.co</a>
+
+Final deliverable: <a href='https://subscribe.keepcool.co' target='_blank' rel='noreferrer'>subscribe.keepcool.co</a>
+
+## Tools used
+
+<TagList>
+  <TagListItem>NextJS</TagListItem>
+  <TagListItem>Tailwind</TagListItem>
+  <TagListItem>Typescript</TagListItem>
+  <TagListItem>Framer Motion</TagListItem>
+  <TagListItem>Beehiiv</TagListItem>
+  <TagListItem>Vercel</TagListItem>
+  <TagListItem>Github</TagListItem>
+  <TagListItem>Postman</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{
+    name: 'Nick van Osdol',
+    role: 'Owner at Keep Cool',
+  }}
+>
+  A million thanks to Brett for crafting this beautiful site for my labor of
+  love. I'm beyond happy with it, especially the touching reader testimonial
+  section.
+</Blockquote>
+
+<StatList>
+  <StatListItem value="2" label="week turnaround" />
+  <StatListItem value="4" label="client design sessions" />
+  <StatListItem value="0" label="client workflow changes" />
+</StatList>

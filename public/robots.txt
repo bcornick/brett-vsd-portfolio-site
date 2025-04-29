@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://brettcornick.com
+
+# Sitemaps
+Sitemap: https://brettcornick.com/sitemap.xml

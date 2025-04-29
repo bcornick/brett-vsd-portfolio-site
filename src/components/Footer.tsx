@@ -254,7 +254,7 @@ export function Footer() {
               </defs>
             </svg>
           </Link>
-          <p className="text-sm text-neutral-700">
+          <p className="text-right text-sm text-neutral-700">
             © Brett Cornick {new Date().getFullYear()}
             <br />
             View site{' '}
@@ -265,6 +265,17 @@ export function Footer() {
               className="underline"
             >
               source code
+            </Link>
+            .
+            <br />
+            View site{' '}
+            <Link
+              href="https://www.youtube.com/watch?v=WAYYwICIcNs"
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+            >
+              design inspo
             </Link>
             .
           </p>

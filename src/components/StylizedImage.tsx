@@ -61,7 +61,7 @@ export function StylizedImage({
               ) : (
                 <Image
                   alt=""
-                  className="w-full bg-neutral-100 object-cover"
+                  className="mt-20 w-full bg-neutral-100 object-cover"
                   style={{ aspectRatio: `${width} / ${height}` }}
                   src={src}
                   {...props}

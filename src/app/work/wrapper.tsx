@@ -24,7 +24,7 @@ export default async function PastProjectLayout({
       <article className="mt-24 sm:mt-32 lg:mt-40">
         <header>
           <PageIntro
-            eyebrow="Development Project"
+            eyebrow="Project Highlight"
             title={pastProject.title}
             centered
           >

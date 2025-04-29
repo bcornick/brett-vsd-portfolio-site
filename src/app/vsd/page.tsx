@@ -64,7 +64,8 @@ function Scope() {
     <Section
       title="Investigate"
       image={{
-        src: 'https://prod.spline.design/6kiGmm4yj8CzrzOc/scene.splinecode',
+        // src: 'https://prod.spline.design/6kiGmm4yj8CzrzOc/scene.splinecode',
+        src: splineStill1,
       }}
       altImage={splineStill1}
     >
@@ -95,7 +96,7 @@ function Scope() {
         <TagListItem>Complex Decision Making</TagListItem>
         <TagListItem>Venture Science Finance</TagListItem>
         <TagListItem>Stochastic Studio</TagListItem>
-        <TagListItem>Feasibility & Technoeconomics</TagListItem>
+        <TagListItem>Feasibility & Techno-economics</TagListItem>
         <TagListItem>Business Modelling</TagListItem>
         <TagListItem>Customer Discovery</TagListItem>
         <TagListItem>Narrative Design & Storytelling</TagListItem>
@@ -131,7 +132,8 @@ function Experiment() {
     <Section
       title="Experiment"
       image={{
-        src: 'https://prod.spline.design/uObiRBk00xFXapJk/scene.splinecode',
+        // src: 'https://prod.spline.design/uObiRBk00xFXapJk/scene.splinecode',
+        src: splineStill2,
         shape: 1,
       }}
       altImage={splineStill2}
@@ -143,7 +145,7 @@ function Experiment() {
           <strong className="font-semibold text-neutral-950">
             prove the technology
           </strong>{' '}
-          against state-of-the-art and then validate it through technoeconomic
+          against state-of-the-art and then validate it through techno-economic
           analysis.
         </p>
       </div>
@@ -152,8 +154,21 @@ function Experiment() {
         Work sample
       </h3>
       <GridList className="mt-4">
-        <GridListItem title="Coming soon" className="col-span-4">
-          Check back in Fall 2024.
+        <GridListItem
+          title="Techno-economic analysis: Flexible GPU clusters"
+          className="col-span-3"
+        >
+          I completed a techno-economic analysis (TEA) for a proposed company
+          called "Nth Power," a hybrid GPU cloud provider and Virtual Power
+          Plant (VPP) operator. <br />
+          <div className="mt-4 flex">
+            <Button
+              href="/work/gpus-as-energy-resources"
+              aria-label={`See project details: automations for deep tech entrepreneurs`}
+            >
+              Project details
+            </Button>
+          </div>
         </GridListItem>
       </GridList>
     </Section>
@@ -165,7 +180,8 @@ function Build() {
     <Section
       title="Build"
       image={{
-        src: 'https://prod.spline.design/xjFFsJb18-etSjJ5/scene.splinecode',
+        // src: 'https://prod.spline.design/xjFFsJb18-etSjJ5/scene.splinecode',
+        src: splineStill3,
         shape: 2,
       }}
       altImage={splineStill3}
@@ -193,7 +209,7 @@ function Build() {
       </h3>
       <GridList className="mt-4">
         <GridListItem title="Coming soon" className="col-span-4">
-          Check back in Fall 2025.
+          Check back in Summer 2026.
         </GridListItem>
       </GridList>
     </Section>

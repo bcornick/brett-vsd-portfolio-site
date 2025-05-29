@@ -199,6 +199,7 @@ function Interests() {
                             alt=""
                             {...example.image}
                             className="h-96 w-full rounded-lg object-cover grayscale group-hover:grayscale-0"
+                            unoptimized={false}
                           />
                           <div className="absolute inset-0 flex flex-col justify-end rounded-lg bg-gradient-to-t from-black to-black/0 to-40% p-6">
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">

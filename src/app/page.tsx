@@ -195,6 +195,7 @@ export default async function Home() {
           height={450}
           className="absolute left-[69vw] top-12 -z-10 hidden [filter:saturate(1.25)] lg:block xl:left-[65vw]"
           priority
+          unoptimized={false}
         />
         <FadeIn className="max-w-3xl" removeMotion>
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-900 [text-wrap:balance] sm:text-6xl lg:text-7xl">

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { socialMediaProfiles } from '@/components/SocialMedia'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 
 const navigation = [
   {
@@ -69,139 +69,139 @@ function Navigation() {
   )
 }
 
-function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
-      <path
-        fill="currentColor"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 3 10 .5v2H0v1h10v2L16 3Z"
-      />
-    </svg>
-  )
-}
+// function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+//   return (
+//     <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
+//       <path
+//         fill="currentColor"
+//         fillRule="evenodd"
+//         clipRule="evenodd"
+//         d="M16 3 10 .5v2H0v1h10v2L16 3Z"
+//       />
+//     </svg>
+//   )
+// }
 
-export function NewsletterForm({
-  action,
-  override,
-}: {
-  action: 'subscribe' | 'unsubscribe'
-  override?: string
-}) {
-  const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-  const [failed, setFailed] = useState(false)
-  const [success, setSuccess] = useState(false)
+// export function NewsletterForm({
+//   action,
+//   override,
+// }: {
+//   action: 'subscribe' | 'unsubscribe'
+//   override?: string
+// }) {
+//   const [email, setEmail] = useState('')
+//   const [submitted, setSubmitted] = useState(false)
+//   const [failed, setFailed] = useState(false)
+//   const [success, setSuccess] = useState(false)
 
-  useEffect(() => {
-    if (override) {
-      setEmail(override)
-    }
-  }, [])
+//   useEffect(() => {
+//     if (override) {
+//       setEmail(override)
+//     }
+//   }, [])
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement> & {
-      target: { email: { value: string } }
-    },
-  ) => {
-    e.preventDefault()
+//   const handleSubmit = async (
+//     e: React.FormEvent<HTMLFormElement> & {
+//       target: { email: { value: string } }
+//     },
+//   ) => {
+//     e.preventDefault()
 
-    setSubmitted(true)
-    setFailed(false)
+//     setSubmitted(true)
+//     setFailed(false)
 
-    const data = {
-      email: e.target.email.value,
-      action: action,
-    }
+//     const data = {
+//       email: e.target.email.value,
+//       action: action,
+//     }
 
-    setEmail('')
+//     setEmail('')
 
-    const JSONdata = JSON.stringify(data)
+//     const JSONdata = JSON.stringify(data)
 
-    const endpoint = '/api/subscribe/'
+//     const endpoint = '/api/subscribe/'
 
-    const options = {
-      method: 'POST',
-      body: JSONdata,
-      timeout: 25000,
-    }
+//     const options = {
+//       method: 'POST',
+//       body: JSONdata,
+//       timeout: 25000,
+//     }
 
-    const response = await fetch(endpoint, options)
+//     const response = await fetch(endpoint, options)
 
-    if (response.ok) {
-      setFailed(false)
-      setSuccess(true)
-    } else {
-      setFailed(true)
-    }
-  }
+//     if (response.ok) {
+//       setFailed(false)
+//       setSuccess(true)
+//     } else {
+//       setFailed(true)
+//     }
+//   }
 
-  return (
-    <form className="max-w-sm" onSubmit={handleSubmit}>
-      <h2
-        className={`font-display text-sm font-semibold tracking-wider text-neutral-950 ${
-          action === 'unsubscribe' ? 'hidden' : ''
-        }`}
-      >
-        Keep up with me
-      </h2>
-      <p
-        className={`mt-4 text-sm text-neutral-700 ${
-          action === 'unsubscribe' ? 'hidden' : ''
-        }`}
-      >
-        Submit your email to get notified whenever I publish new content (less
-        than 1 email per week).
-      </p>
-      <div className="relative mt-6">
-        <input
-          disabled={success || (submitted && !failed)}
-          type="email"
-          name="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder={`${!submitted && !failed ? 'Email address' : ''}${
-            submitted && !success && !failed ? 'Sending...' : ''
-          }${submitted && success ? 'Success' : ''}${
-            submitted && failed ? 'Error. Please try again.' : ''
-          }`}
-          autoComplete="email"
-          aria-label="Email address"
-          required
-          className={`block w-full rounded-2xl border bg-transparent py-4 pl-6 pr-20 text-base/6 ring-4 ring-transparent transition focus:outline-none ${
-            !submitted && !failed
-              ? 'border-neutral-300 text-neutral-950 placeholder:text-neutral-500 focus:border-neutral-950 focus:ring-neutral-950/5'
-              : ''
-          } ${
-            submitted && success
-              ? 'border-emerald-400 placeholder:italic placeholder:text-emerald-500'
-              : ''
-          } ${
-            submitted && failed
-              ? 'border-red-400 placeholder:italic placeholder:text-red-500 focus:border-red-400'
-              : ''
-          } ${
-            submitted && !success && !failed
-              ? 'opacity-70 placeholder:italic'
-              : ''
-          }`}
-        />
-        <div className="absolute inset-y-1 right-1 flex justify-end">
-          <button
-            type="submit"
-            aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
-            disabled={submitted && !failed}
-          >
-            <ArrowIcon className="w-4" />
-          </button>
-        </div>
-      </div>
-    </form>
-  )
-}
+//   return (
+//     <form className="max-w-sm" onSubmit={handleSubmit}>
+//       <h2
+//         className={`font-display text-sm font-semibold tracking-wider text-neutral-950 ${
+//           action === 'unsubscribe' ? 'hidden' : ''
+//         }`}
+//       >
+//         Keep up with me
+//       </h2>
+//       <p
+//         className={`mt-4 text-sm text-neutral-700 ${
+//           action === 'unsubscribe' ? 'hidden' : ''
+//         }`}
+//       >
+//         Submit your email to get notified whenever I publish new content (less
+//         than 1 email per week).
+//       </p>
+//       <div className="relative mt-6">
+//         <input
+//           disabled={success || (submitted && !failed)}
+//           type="email"
+//           name="email"
+//           id="email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//           placeholder={`${!submitted && !failed ? 'Email address' : ''}${
+//             submitted && !success && !failed ? 'Sending...' : ''
+//           }${submitted && success ? 'Success' : ''}${
+//             submitted && failed ? 'Error. Please try again.' : ''
+//           }`}
+//           autoComplete="email"
+//           aria-label="Email address"
+//           required
+//           className={`block w-full rounded-2xl border bg-transparent py-4 pl-6 pr-20 text-base/6 ring-4 ring-transparent transition focus:outline-none ${
+//             !submitted && !failed
+//               ? 'border-neutral-300 text-neutral-950 placeholder:text-neutral-500 focus:border-neutral-950 focus:ring-neutral-950/5'
+//               : ''
+//           } ${
+//             submitted && success
+//               ? 'border-emerald-400 placeholder:italic placeholder:text-emerald-500'
+//               : ''
+//           } ${
+//             submitted && failed
+//               ? 'border-red-400 placeholder:italic placeholder:text-red-500 focus:border-red-400'
+//               : ''
+//           } ${
+//             submitted && !success && !failed
+//               ? 'opacity-70 placeholder:italic'
+//               : ''
+//           }`}
+//         />
+//         <div className="absolute inset-y-1 right-1 flex justify-end">
+//           <button
+//             type="submit"
+//             aria-label="Submit"
+//             className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
+//             disabled={submitted && !failed}
+//           >
+//             <ArrowIcon className="w-4" />
+//           </button>
+//         </div>
+//       </div>
+//     </form>
+//   )
+// }
 
 export function Footer() {
   return (

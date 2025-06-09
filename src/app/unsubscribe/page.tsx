@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import Link from 'next/link'
 // import { useSearchParams } from 'next/navigation'
@@ -7,7 +7,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 // import { NewsletterForm } from '@/components/Footer'
 
-export default function NotFound() {
+export default function Unsubscribe() {
   // const searchParams = useSearchParams()
   // const overrideEmail = searchParams.get('email')?.toString()
 

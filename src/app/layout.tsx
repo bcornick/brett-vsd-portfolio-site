@@ -1,10 +1,17 @@
 import { type Metadata } from 'next'
+import { Inter } from 'next/font/google'
 
 import { RootLayout } from '@/components/RootLayout'
 
 import { Analytics } from '@vercel/analytics/next'
 
 import '@/styles/tailwind.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -29,17 +36,21 @@ export const metadata: Metadata = {
     creator: '@brett_cornick',
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
-    nocache: true,
+    nocache: false,
     googleBot: {
       index: true,
-      follow: false,
-      noimageindex: true,
+      follow: true,
+      noimageindex: false,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  other: {
+    'font-display': 'swap',
+    'next-head-count': '0',
   },
 }
 

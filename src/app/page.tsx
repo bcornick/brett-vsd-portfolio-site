@@ -41,18 +41,20 @@ function Skills() {
                       <Image
                         src={logo}
                         alt={skill as string}
-                        unoptimized
                         width={150}
                         height={100}
+                        sizes="(min-width: 1024px) 37.5px, 75px"
+                        quality={85}
                       />
                     </Link>
                   ) : (
                     <Image
                       src={logo}
                       alt={skill as string}
-                      unoptimized
                       width={150}
                       height={100}
+                      sizes="(min-width: 1024px) 37.5px, 75px"
+                      quality={85}
                     />
                   )}
                 </FadeIn>
@@ -195,7 +197,7 @@ export default async function Home() {
           height={450}
           className="absolute left-[69vw] top-12 -z-10 hidden [filter:saturate(1.25)] lg:block xl:left-[65vw]"
           priority
-          unoptimized={false}
+          sizes="(min-width: 1024px) 450px, 0px"
         />
         <FadeIn className="max-w-3xl" removeMotion>
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-900 [text-wrap:balance] sm:text-6xl lg:text-7xl">

@@ -7,12 +7,6 @@ import { Analytics } from '@vercel/analytics/next'
 
 import '@/styles/tailwind.css'
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
 export const metadata: Metadata = {
   title: {
     template: '%s - Brett Cornick',

@@ -26,6 +26,7 @@
     "autoprefixer": "^10.4.7",
     "caniuse-lite": "^1.0.30001685",
     "clsx": "^1.2.0",
+    "critters": "^0.0.23",
     "escape-string-regexp": "^5.0.0",
     "fast-glob": "^3.2.12",
     "framer-motion": "^10.15.2",

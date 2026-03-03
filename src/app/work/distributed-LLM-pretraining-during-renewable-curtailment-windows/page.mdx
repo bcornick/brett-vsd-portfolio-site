@@ -1,0 +1,59 @@
+import logo from '@/images/projects/stochasticStudio/logomark-dark.svg'
+import imageHero from './hero.jpg'
+
+export const pastProject = {
+  client: 'VSD Research',
+  title:
+    'Distributed LLM pretraining during renewable curtailment windows: a feasibility study',
+  description:
+    'This technical report presents a system that performs full-parameter LLM training across geo-distributed GPU clusters during regional curtailment windows, elastically switching between local single-site training and federated multi-site synchronization as sites become available or unavailable.',
+  summary: [
+    'This technical report presents a system that performs full-parameter LLM training across geo-distributed GPU clusters during regional curtailment windows, elastically switching between local single-site training and federated multi-site synchronization as sites become available or unavailable.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2026-03',
+  service: 'Federated learning',
+  testimonial: {
+    author: {
+      name: 'Key research finding',
+      role: '2026 report',
+    },
+    content:
+      'Curtailment-aware scheduling preserves training quality while reducing operational emissions to 5-12% of single-site baselines.',
+  },
+}
+
+export const metadata = {
+  title: `${pastProject.client}`,
+  description: pastProject.description,
+}
+
+## Overview
+
+Training large language models consumes substantial energy. At the same time, renewable generation regularly produces more electricity than the grid can absorb, forcing clean power to be curtailed. In California alone, 3.4 million MWh of wind and solar output was curtailed in 2024, a 29% increase from the prior year. These windows of surplus generation represent compute time that is both low-carbon and low-cost.
+
+This project, a collaboration with Philipp Wiesner, Soeren Becker, Dominik Scheinert, Alexander Acker, and Odej Kao at <a href="https://www.exalsius.ai" target="_blank" rel="noreferrer">exalsius</a> and TU Berlin, demonstrates a system for full-parameter LLM training across geo-distributed GPU clusters during regional curtailment windows. The system dynamically adapts its execution mode based on how many sites are currently experiencing curtailment: training locally when a single site is available, performing federated synchronization when multiple sites overlap, and pausing entirely when no curtailment is detected. Curtailment signals are derived from real-world marginal carbon intensity traces provided by WattTime.
+
+We trained a 561M-parameter transformer model on 12.8 billion tokens across three clusters representing California, Texas, and South Australia. The Flower federated learning framework handles multi-site coordination, while the exalsius control plane manages elastic provisioning and deprovisioning of GPU nodes across clusters. A custom hysteresis mechanism prevents oscillation from short-lived signal fluctuations, and work-weighted federated averaging accommodates heterogeneous compute and sites joining or leaving mid-round.
+
+The curtailment-aware approach reaches training quality comparable to conventional single-site and continuous federated baselines while reducing operational carbon emissions to 5-12% of single-region runs. Energy consumption across all scenarios was comparable (36-38 kWh), confirming that emissions reductions come from shifting when and where energy is consumed rather than from reduced compute.
+
+View the full report <a href="https://arxiv.org/abs/2602.22760" target="_blank" rel="noreferrer">here</a>. The prototype is available <a href="https://github.com/exalsius/curtail-llm" target="_blank" rel="noreferrer">on GitHub</a>.
+
+## Tools used
+
+<TagList>
+  <TagListItem>Python</TagListItem>
+  <TagListItem>PyTorch</TagListItem>
+  <TagListItem>Flower</TagListItem>
+  <TagListItem>Kubernetes</TagListItem>
+  <TagListItem>Redis</TagListItem>
+  <TagListItem>Vessim</TagListItem>
+</TagList>
+
+<StatList>
+  <StatListItem value="95%" label="CO2 emissions reduction" />
+  <StatListItem value="4" label="geo-distributed clusters" />
+  <StatListItem value="99.3%" label="training parity vs. baseline" />
+</StatList>

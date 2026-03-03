@@ -43,7 +43,6 @@ function Skills() {
                         alt={skill as string}
                         width={150}
                         height={100}
-                        sizes="(min-width: 1024px) 37.5px, 75px"
                         quality={85}
                       />
                     </Link>
@@ -53,7 +52,6 @@ function Skills() {
                       alt={skill as string}
                       width={150}
                       height={100}
-                      sizes="(min-width: 1024px) 37.5px, 75px"
                       quality={85}
                     />
                   )}

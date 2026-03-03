@@ -1,5 +1,6 @@
 import logo from '@/images/projects/stochasticStudio/logomark-dark.svg'
 import imageHero from './hero.jpg'
+import Link from 'next/link'
 
 export const pastProject = {
   client: 'VSD Research',
@@ -38,6 +39,8 @@ This project, a collaboration with Philipp Wiesner, Soeren Becker, Dominik Schei
 We trained a 561M-parameter transformer model on 12.8 billion tokens across three clusters representing California, Texas, and South Australia. The Flower federated learning framework handles multi-site coordination, while the exalsius control plane manages elastic provisioning and deprovisioning of GPU nodes across clusters. A custom hysteresis mechanism prevents oscillation from short-lived signal fluctuations, and work-weighted federated averaging accommodates heterogeneous compute and sites joining or leaving mid-round.
 
 The curtailment-aware approach reaches training quality comparable to conventional single-site and continuous federated baselines while reducing operational carbon emissions to 5-12% of single-region runs. Energy consumption across all scenarios was comparable (36-38 kWh), confirming that emissions reductions come from shifting when and where energy is consumed rather than from reduced compute.
+
+I&apos;ve written an accompanying blog post discussing the implications of this work for multi-agent energy systems. Read it <Link href='/media/curtailment-aware-workload-scheduling'>here</Link>.
 
 View the full report <a href="https://arxiv.org/abs/2602.22760" target="_blank" rel="noreferrer">here</a>. The prototype is available <a href="https://github.com/exalsius/curtail-llm" target="_blank" rel="noreferrer">on GitHub</a>.
 

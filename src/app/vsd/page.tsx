@@ -159,12 +159,12 @@ function Experiment() {
           className="col-span-3"
         >
           I completed a techno-economic analysis (TEA) for a proposed company
-          called "Nth Power," a hybrid GPU cloud provider and Virtual Power
+          called "nth Power," a hybrid GPU cloud provider and Virtual Power
           Plant (VPP) operator. <br />
           <div className="mt-4 flex">
             <Button
               href="/work/gpus-as-energy-resources"
-              aria-label={`See project details: automations for deep tech entrepreneurs`}
+              aria-label={`See project details: gpus as energy resources`}
             >
               Project details
             </Button>
@@ -208,8 +208,21 @@ function Build() {
         Work sample
       </h3>
       <GridList className="mt-4">
-        <GridListItem title="Coming soon" className="col-span-4">
-          Check back in Summer 2026.
+        <GridListItem
+          title="LLM pretraining during renewable curtailment windows"
+          className="col-span-3"
+        >
+          Our published paper presents a system that performs full-parameter LLM
+          training across geo-distributed GPU clusters during regional
+          curtailment windows. <br />
+          <div className="mt-4 flex">
+            <Button
+              href="/work/distributed-LLM-pretraining-during-renewable-curtailment-windows"
+              aria-label={`See project details: LLm pre-training using curtailment windows`}
+            >
+              Project details
+            </Button>
+          </div>
         </GridListItem>
       </GridList>
     </Section>
